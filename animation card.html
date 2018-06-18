@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>animation cards</title>
+<style>
+
+</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+}
+
+function listener(e) {
+  var l = document.createElement("li");
+  switch(e.type) {
+    case "animationstart":
+      l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+      break;
+    case "animationend":
+      l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+      break;
+    case "animationiteration":
+      l.innerHTML = "New loop started at time " + e.elapsedTime;
+      break;
+  }
+  document.getElementById("output").appendChild(l);
+}
+
+</script>
+<body onload="setup()">
+  <h1 id="watchme">My name is Jo Junhyeon</h1>
+  <p>Major is IT</p>
+  
+  <ul id="output">
+  </ul>
+</body>
+
+</html>
